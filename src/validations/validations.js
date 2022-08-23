@@ -44,14 +44,12 @@ exports.validateSignIn = function (user) {
   return schema.validate(user);
 };
 
-
 exports.validateAddSpecialize = function (category) {
   const schema = Joi.object({
     name: Joi.string().required(),
   });
   return schema.validate(category);
 };
-
 
 exports.validateAddFavorite = function (favorite) {
   const schema = Joi.object({
@@ -61,6 +59,30 @@ exports.validateAddFavorite = function (favorite) {
   return schema.validate(favorite);
 };
 
+exports.validateAddMedicine = function (favorite) {
+  const schema = Joi.object({
+    user: Joi.string().required(),
+    city: Joi.string().required(),
+    name: Joi.string().required(),
+  });
+  return schema.validate(favorite);
+};
+
+exports.validateAddDonateBlood = function (favorite) {
+  const schema = Joi.object({
+    user: Joi.string().required(),
+    bloodGroup: Joi.string().required(),
+    unitBlood: Joi.number().required(),
+    status: Joi.string().required(),
+    location: Joi.string().required(),
+    active: Joi.boolean().required(),
+  });
+  return schema.validate(favorite);
+};
+
+
+
+
 
 exports.validateAddTimeTable = function (timeTable) {
   const schema = Joi.object({
@@ -68,12 +90,10 @@ exports.validateAddTimeTable = function (timeTable) {
     day: Joi.number().required(),
     from: Joi.string().required(),
     to: Joi.string().required(),
-    isActive: Joi.boolean() ,
+    isActive: Joi.boolean(),
   });
   return schema.validate(timeTable);
 };
-
-
 
 exports.validateAddTypeService = function (typeService) {
   const schema = Joi.object({

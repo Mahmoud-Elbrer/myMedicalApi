@@ -1,4 +1,8 @@
 {
     "jwtPrivateKey" : "jwtPrivateKey" ,
+    "consumerUserKey" : "303050" ,
+    "consumerDoctorKey" : "303060" ,
+    "consumerPharmacistKey" : "303070" ,
     "serverKey" : "AAAAXM60n2w:APA91bFa_pm1_TG2DhQQ8Va12dOunTrmZf1AtYTVlBPQe_utb0Nta6lQ2Kn0B6ZrzXPk_3ykCpj9zuCaZQwKUYLys3v8VCB9_bzCie2sS5NCWwqjWB-GKD7HKnefPSaAYbu2CUKEYF48"
+
 }

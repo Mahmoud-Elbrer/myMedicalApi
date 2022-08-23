@@ -9,6 +9,10 @@ var bookRouter = require("../routes/book");
 var notificationRouter = require("../routes/notification");
 var stateRouter = require("../routes/state");
 var cityRouter = require("../routes/city");
+var medicineRouter = require("../routes/medicine");
+var pharmacistRouter = require("../routes/pharmacist");
+var authRouter = require("../routes/auth");
+var donateBloodRouter = require("../routes/donate_blood");
 const error = require("../middleware/error");
 
 module.exports = function (app) {
@@ -23,5 +27,9 @@ module.exports = function (app) {
   app.use("/api/notification", notificationRouter);
   app.use("/api/state", stateRouter);
   app.use("/api/city", cityRouter);
+  app.use("/api/medicine", medicineRouter);
+  app.use("/api/pharmacist", pharmacistRouter);
+  app.use("/api/auth", authRouter);
+  app.use("/api/donateBlood", donateBloodRouter);
   app.use(error);
 };
